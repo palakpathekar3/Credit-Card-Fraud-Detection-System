@@ -19,7 +19,7 @@ st.set_page_config(
 BASE_DIR = Path(__file__).parent.parent
 
 MODEL_PATH = BASE_DIR / "models" / "random_forest_model.pkl"
-DATA_PATH = BASE_DIR / "data" / "creditcard.csv"
+SCALER_PATH = BASE_DIR / "models" / "scaler.pkl"
 
 # ----------------------------
 # Load Model
@@ -29,10 +29,7 @@ model = joblib.load(MODEL_PATH)
 # ----------------------------
 # Recreate training scaler
 # ----------------------------
-training_df = pd.read_csv(DATA_PATH)
-
-scaler = StandardScaler()
-scaler.fit(training_df[["Amount"]])
+scaler = joblib.load(SCALER_PATH)
 
 # ----------------------------
 # Title
