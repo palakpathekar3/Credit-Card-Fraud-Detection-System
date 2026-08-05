@@ -51,6 +51,8 @@ Credit Card Fraud Alert System/
 ├── requirements.txt
 ├── credit_card_fraud_detection.ipynb
 ├── README.md
+├── App.jsx
+├── index.html
 └── .gitignore
 ```
 
